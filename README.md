@@ -197,7 +197,7 @@ Example usage (note this assumes `jq` is installed for command line processing o
 
 ```sh
 # Start container and save the container id
-CID=$(docker run -d swaggerapi/swagger-generator)
+CID=$(-d swaggerapi/swagger-generator)
 # allow for startup
 sleep 5
 # Get the IP of the running container
@@ -229,7 +229,10 @@ docker run --rm -v ${PWD}:/local swaggerapi/swagger-codegen-cli generate \
     -o /local/out/go
 ```
 
+(If you're on Windows replace `${PWD}` with `%CD%)
+
 The generated code will be located under `./out/go` in the current directory.
+
 
 ## Getting Started
 
